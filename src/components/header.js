@@ -2,6 +2,10 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
+// Components
+import Burger from "./burgerMenu/burger";
+import Menu from "./burgerMenu/menu";
+
 const Header = ({ siteTitle }) => (
   <header
     style={{
