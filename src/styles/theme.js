@@ -1,7 +1,15 @@
-export const theme = {
+export const lightTheme = {
     primaryBackground: "lightblue",
     primaryColor: "black",
     secondaryColor: "#FFFFFF",
-    primaryHover: "#343078",
+    primaryHover: "blue",
+    mobile: "576px",
+}
+
+export const darkTheme = {
+    primaryBackground: "blue",
+    primaryColor: "#FFFFFF",
+    secondaryColor: "black",
+    primaryHover: "blue",
     mobile: "576px",
 }

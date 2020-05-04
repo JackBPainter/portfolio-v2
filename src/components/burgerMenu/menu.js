@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby";
+import { Link } from "gatsby"
 import { bool } from "prop-types"
 
 const StyledMenu = styled.nav`
@@ -14,7 +14,7 @@ const StyledMenu = styled.nav`
   position: absolute;
   left: 0;
   transition: transform 0.3s ease-in-out;
-  transform: ${({ open }) => open ? "translateX(0)" : "translateX(-100%)"};
+  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
   z-index: 1;
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
@@ -27,9 +27,9 @@ const StyledMenu = styled.nav`
     padding: 2rem 0;
     font-weight: bold;
     letter-spacing: 0.2rem;
-    color: ${({ theme }) => theme.primaryDark};
-    text-decoration: none;
+    color: ${({ theme }) => theme.primaryColor};
     transition: color 0.3s linear;
+    text-decoration: none;
 
     @media (max-width: ${({ theme }) => theme.mobile}) {
       font-size: 1.5rem;
@@ -44,28 +44,17 @@ const StyledMenu = styled.nav`
 
 const Menu = ({ open }) => {
   return (
-    <StyledMenu open={open}> 
-      <a href="/">
-        <span role="img" aria-label="about us">
-        </span>
-        About
-      </a>
-      <a href="/">
-        <span role="img" aria-label="price">
-        </span>
-        Projects
-      </a>
-      <a href="/">
-        <span role="img" aria-label="contact">
-        </span>
-        Contact
-      </a>
+    <StyledMenu open={open}>
+      <Link to="/">About</Link>
+      <Link to="/experience">Experience</Link>
+      <Link to="/projects">Projects</Link>
+      <Link to="/contact">Contact</Link>
     </StyledMenu>
   )
 }
 
 Menu.propTypes = {
-    open: bool.isRequired
+  open: bool.isRequired,
 }
 
 export default Menu
