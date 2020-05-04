@@ -1,11 +1,17 @@
 import React from "react"
 import { Link } from "gatsby"
+import { ThemeProvider } from "styled-components"
+import { theme } from "../styles/theme"
+import { GlobalStyles } from "../styles/global"
 
+// Components
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
+  <ThemeProvider theme={theme}>
+  <GlobalStyles />
   <Layout>
     <SEO title="Home" />
     <h1>Hi people</h1>
@@ -16,6 +22,7 @@ const IndexPage = () => (
     </div>
     <Link to="/page-2/">Go to page 2</Link>
   </Layout>
+  </ThemeProvider>
 )
 
 export default IndexPage
