@@ -4,17 +4,18 @@ import { bool, func } from "prop-types"
 
 const StyledBurger = styled.button`
   position: absolute;
+  top: 30px;
   left: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 2rem;
-  height: 2rem;
+  height: 30px;
   background: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 10000;
+  z-index: 5;
 
   &:focus {
     outline: none;
@@ -22,12 +23,12 @@ const StyledBurger = styled.button`
 
   div {
     width: 2rem;
-    height: 0.25rem;
-    background: ${({ theme, open }) => open ? theme.secondaryColor: theme.primaryColor };
+    height: 5px;
+    background: ${({ theme }) => theme.primaryColor };
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
-    transform-origin: 1px;
+    transform-origin: 4px;
 
     :first-child {
       transform: ${({ open }) => open ? "rotate(45deg)" : "rotate(0)"};
