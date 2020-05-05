@@ -30,8 +30,8 @@ module.exports = {
     {
       resolve: `gatsby-styled-components-dark-mode`,
       options: {
-        light: require(`${__dirname}/src/styles/theme.js`).lightTheme,
         dark: require(`${__dirname}/src/styles/theme.js`).darkTheme,
+        light: require(`${__dirname}/src/styles/theme.js`).lightTheme,
     },
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality

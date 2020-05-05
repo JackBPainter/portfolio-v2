@@ -2,8 +2,6 @@ import PropTypes from "prop-types"
 import React, { useState, useRef } from "react"
 import styled from "styled-components"
 import { useOnOutsideClick } from "../hooks/useOnOutsideClick"
-import { useToggleTheme } from "../hooks/useToggleTheme"
-import { lightTheme, darkTheme } from "../styles/theme"
 
 // Components
 import Burger from "./burgerMenu/burger"
@@ -31,7 +29,6 @@ const StyledButtonContainer = styled.div`
 const Header = ({ siteTitle }) => {
   const [open, setOpen] = useState(false)
   const node = useRef()
-  const [theme, toggleTheme] = useToggleTheme()
 
   useOnOutsideClick(node, () => setOpen(false))
 
@@ -42,7 +39,7 @@ const Header = ({ siteTitle }) => {
           <Menu open={open} setOpen={setOpen} />
         </div>
         <StyledButtonContainer>
-          <Toggle theme={theme} toggleTheme={toggleTheme} />
+          <Toggle />
         </StyledButtonContainer>  
     </StyledHeader>
   )
