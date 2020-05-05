@@ -9,19 +9,20 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
-const IndexPage = () => {
+const Index = () => {
   const [theme] = useToggleTheme()
+  const themeMode = theme === "light" ? lightTheme : darkTheme
+  console.log(themeMode)
 
   return (
-    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+    <ThemeProvider theme={themeMode}>
       <GlobalStyles />
-      <Layout>
-      </Layout>
+      <Layout />
     </ThemeProvider>
   )
 }
 
-export default IndexPage
+export default Index
 
         {/*<SEO title="Home" />
       <h1>Hi people</h1>
