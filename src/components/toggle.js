@@ -1,13 +1,12 @@
-import React from "react"
+import React, { useContext } from "react"
 import { func, string } from "prop-types"
-import styled from "styled-components"
+import { ThemeManagerContext } from "gatsby-styled-components-dark-mode"
 
 const Toggle = ({ theme, toggleTheme }) => {
-    const isLight = theme === 'light'
-    console.log(theme)
+    const themeContext = useContext(ThemeManagerContext)
 
     return (
-        <button onClick={toggleTheme}>lightMode</button>
+        <button onClick={() => themeContext.toggleDark()}>lightMode</button>
     )
 }
 

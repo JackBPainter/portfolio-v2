@@ -3,6 +3,7 @@ import React, { useState, useRef } from "react"
 import styled from "styled-components"
 import { useOnOutsideClick } from "../hooks/useOnOutsideClick"
 import { useToggleTheme } from "../hooks/useToggleTheme"
+import { lightTheme, darkTheme } from "../styles/theme"
 
 // Components
 import Burger from "./burgerMenu/burger"
@@ -14,7 +15,7 @@ import Toggle from "./Toggle"
 const StyledHeader = styled.header`
   position: relative;
   height: 90px;
-  background: ${({ theme }) => theme.secondaryColor};
+  background: ${props => props.theme.primaryColor};
   margin-bottom: 1.45rem;
   z-index: 5;
 `

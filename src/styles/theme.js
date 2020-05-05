@@ -1,4 +1,4 @@
-export const lightTheme = {
+const lightTheme = {
     primaryBackground: "lightblue",
     primaryColor: "black",
     secondaryColor: "#FFFFFF",
@@ -6,10 +6,25 @@ export const lightTheme = {
     mobile: "576px",
 }
 
-export const darkTheme = {
+const darkTheme = {
     primaryBackground: "blue",
     primaryColor: "#FFFFFF",
     secondaryColor: "black",
     primaryHover: "blue",
     mobile: "576px",
 }
+
+module.exports = { lightTheme, darkTheme }
+
+// const theme = {
+//     primaryLightBackground: "lightblue",
+//     primaryDarkBackground: "blue",
+//     primaryLightColor: "black",
+//     primaryDarkColor: "#FFFFFF",
+//     secondaryLightColor: "#FFFFFF",
+//     secondaryDarkColor: "black",
+//     primaryHover: "blue",
+//     mobile: "576px",
+// }
+
+// module.exports = { theme }
