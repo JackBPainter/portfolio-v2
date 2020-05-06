@@ -15,15 +15,17 @@ const StyledSliderContainer = styled.button`
   overflow: hidden;
   padding: 0.5rem;
   position: relative;
-  width: 70px;
+  width: 60px;
   height: 35px;
 `
 
 const StyledCircle = styled.em`
     position: absolute;
-    background: blue;
+    background: ${({ isDark }) => isDark ? '#FFFFFF': 'black'};
     border-radius: 100%;
-    top: 7.5px;
+    transition: all 0.2s linear;
+    top: 7.75px;
+    left: ${({ isDark }) => isDark ? '30px': '6.5px'};
     height: 17.5px;
     width: 17.5px;
 `
