@@ -13,14 +13,25 @@ const StyledHeader = styled.header`
   position: relative;
   height: 90px;
   background: ${({ theme }) => theme.primaryColor};
+  color: ${({ theme }) => theme.secondaryColor};
   margin-bottom: 1.45rem;
 `
 
-// const StyledImg = styled.img`
-//   width: 45px;
-//   height: 45px;
-//   color: ${({ theme }) => theme.secondaryColor};
-// `
+const StyledTitle = styled.div`
+  position: absolute;
+  top: 5px;
+  left: 100px;
+  transition: transform 0.3s ease-in-out;
+  transform: ${({ open }) => open ? 'translateX(25%)' : 'translateX(0)'};
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 1.45rem 1.0875rem;
+`
+
+const StyledH1 = styled.h1`
+  padding: 0;
+  margin: 0;
+`
 
 const Header = ({ siteTitle }) => {
   const [open, setOpen] = useState(false)
@@ -34,11 +45,13 @@ const Header = ({ siteTitle }) => {
         <Burger open={open} setOpen={setOpen} />
         <Menu open={open} setOpen={setOpen} />
       </div>
+      <StyledTitle open={open}>
+        <StyledH1>{siteTitle}</StyledH1>
+      </StyledTitle>
       <Buttons />
-      </StyledHeader>
+    </StyledHeader>
   )
 }
-
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
