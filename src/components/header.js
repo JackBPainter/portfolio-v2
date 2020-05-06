@@ -8,7 +8,6 @@ import Burger from "./burgerMenu/burger"
 import Menu from "./burgerMenu/menu"
 import Toggle from "./Toggle"
 
-
 // Styled Components
 const StyledHeader = styled.header`
   position: relative;
