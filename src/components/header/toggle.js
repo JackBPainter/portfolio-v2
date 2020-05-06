@@ -10,7 +10,6 @@ const StyledSliderContainer = styled.button`
   border-radius: 30px;
   cursor: pointer;
   font-size: 0.5rem;
-  margin: 0 auto;
   overflow: hidden;
   padding: 0.5rem;
   position: relative;

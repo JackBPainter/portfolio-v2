@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Jack Painter Portfolio`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `Jack Painter's portfolio built using gatsby (first proper project using it so be gentle :)`,
+    author: `https://github.com/JackBPainter`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -10,7 +10,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/images`,  //_dirname is the directoy name of the current module 
       },
     },
     `gatsby-transformer-sharp`,
