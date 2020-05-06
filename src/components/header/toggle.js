@@ -14,7 +14,7 @@ const StyledSliderContainer = styled.button`
   padding: 0.5rem;
   position: relative;
   width: 60px;
-  height: 35px;
+  height: 32px;
 `
 
 const StyledCircle = styled.em`
@@ -24,7 +24,7 @@ const StyledCircle = styled.em`
     border-radius: 100%;
     transition: all 0.2s linear;
     font-size: 0.5rem;
-    top: 7.75px;
+    top: 5.5px;
     left: ${({ isDark }) => isDark ? '30px': '6.5px'};
     height: 17.5px;
     width: 17.5px;

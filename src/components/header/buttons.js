@@ -6,33 +6,30 @@ import Toggle from "./toggle"
 
 const StyledButtonContainer = styled.div`
   top: 30px;
-  width: 500px;
-  height: 100px;
+  width: 155px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   position: absolute;
   right: 2rem;
-  z-index: 1000;
-
-  svg {
-    height: 32px;
-    width: 32px;
-  }
+  z-index: 5;
 `
 
 const StyledGithubContainer = styled.span`
+  height: 32px;
+  width: 32px;
 
   path:first-child {
     fill: ${({ theme }) => theme.secondaryColor};
   }
 
   path {
-      fill: ${({ theme }) => theme.primaryColor};
+    fill: ${({ theme }) => theme.primaryColor};
   }
-
 `
 
 const StyledLinkedInContainer = styled.span`
+  height: 32px;
+  width: 32px;
   fill: ${({ theme }) => theme.secondaryColor};
 `
 
