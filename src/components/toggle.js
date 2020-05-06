@@ -1,5 +1,4 @@
 import React, { useContext } from "react"
-import { func, string } from "prop-types"
 import styled from "styled-components"
 import { ThemeManagerContext } from "gatsby-styled-components-dark-mode"
 
@@ -21,9 +20,11 @@ const StyledSliderContainer = styled.button`
 
 const StyledCircle = styled.em`
     position: absolute;
-    background: ${({ isDark }) => isDark ? '#FFFFFF': 'black'};
+    background: ${({ isDark }) => isDark ? '#FFFFFF' : 'black'};
+    color: ${({ isDark }) => isDark ? 'black' : '#FFFFFF'};
     border-radius: 100%;
     transition: all 0.2s linear;
+    font-size: 0.5rem;
     top: 7.75px;
     left: ${({ isDark }) => isDark ? '30px': '6.5px'};
     height: 17.5px;
@@ -38,11 +39,6 @@ const Toggle = () => {
         <StyledCircle isDark={themeContext.isDark}></StyledCircle>
       </StyledSliderContainer>
   )
-
 }
 
 export default Toggle
-
-// Dynamically change the dark mode text based on opposite to current theme(use isDark from themeContext)
-
-// <button onClick={() => themeContext.toggleDark()}>lightMode</button>
