@@ -26,6 +26,10 @@ const StyledTitle = styled.div`
   margin: 0 auto;
   max-width: 960px;
   padding: 1.45rem 1.0875rem;
+
+  @media (max-width: ${({ theme }) => theme.tablet}) {
+    opacity: 0;
+  }
 `
 
 const StyledH1 = styled.h1`
