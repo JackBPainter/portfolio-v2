@@ -9,12 +9,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,  //_dirname is the directoy name of the current module 
+        name: `src`,
+        path: `${__dirname}/src/`,
       },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -29,8 +30,8 @@ module.exports = {
       options: {
         dark: require(`${__dirname}/src/styles/theme.js`).darkTheme,
         light: require(`${__dirname}/src/styles/theme.js`).lightTheme,
+      },
     },
-    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
