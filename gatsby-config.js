@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Jack Painter Portfolio`,
+    title: `Jack Painter - Portfolio`,
     description: `Jack Painter's portfolio built using gatsby (first proper project using it so be gentle :)`,
     author: `https://github.com/JackBPainter`,
   },
