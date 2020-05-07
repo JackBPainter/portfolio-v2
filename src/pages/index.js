@@ -1,5 +1,4 @@
 import React from "react"
-import { GlobalStyles } from "../styles/global"
 
 // Components
 import About from "./about"
@@ -14,8 +13,5 @@ const Index = () => {
     </>
   )
 }
-
-// <GlobalStyles />
-
 
 export default Index
