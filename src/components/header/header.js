@@ -14,7 +14,7 @@ const StyledHeader = styled.header`
   height: 90px;
   background: ${({ theme }) => theme.primaryColor};
   color: ${({ theme }) => theme.secondaryColor};
-  margin-bottom: 1.45rem;
+  margin-bottom: 55px;
 `
 
 const StyledTitle = styled.div`

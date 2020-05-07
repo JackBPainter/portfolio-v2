@@ -8,7 +8,6 @@ export const GlobalStyles = createGlobalStyle`
         -moz-osx-font-smoothing: grayscale;
         background: ${({ theme }) => theme.primaryBackground};
         color: ${({ theme }) => theme.primaryColor};
-        height: 100vh;
         text-rendering: optimizeLegibility;
         font-family: sans-serif;
     }
