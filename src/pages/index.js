@@ -10,10 +10,12 @@ const Index = () => {
 
   return (
     <>
-      <GlobalStyles />
       <About />
     </>
   )
 }
+
+// <GlobalStyles />
+
 
 export default Index

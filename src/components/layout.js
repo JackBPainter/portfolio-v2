@@ -8,6 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { GlobalStyles } from "../styles/global"
 
 import Header from "./header/header"
 
@@ -24,6 +25,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <GlobalStyles />
       <Header siteTitle={data.site.siteMetadata.title} />
       <div style={{margin: `0 auto`}}>
         <main>{children}</main>
