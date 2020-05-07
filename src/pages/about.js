@@ -38,13 +38,14 @@ const StyledSvgContainer = styled.div`
     fill: ${({ theme }) => theme.primaryColor};
     position: absolute;
     width: 35%;
-    left: -16px;
+    left: -27px;
     top: -41px;
-    transform: rotate(-37deg) scaleX(-1);
+    transform: rotate(-25deg) scaleX(-1);
   }
 `
 
 const StyledH1 = styled.h1`
+  font-size: 40px;
   font-weight: 600;
   text-align: center;
   margin: 20px;
