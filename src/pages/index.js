@@ -42,6 +42,7 @@ const StyledSvgContainer = styled.div`
     left: -27px;
     top: -41px;
     transform: rotate(-25deg) scaleX(-1);
+    transition: all 0.3s linear;
   }
 `
 
@@ -49,13 +50,16 @@ const StyledH1 = styled.h1`
   font-size: 40px;
   font-weight: 600;
   text-align: center;
-  margin: 20px;
+  margin-top: 20px;
+  margin-bottom: 0;
+  transition: all 0.3s linear;
 `
 
 const StyledP = styled.p`
   font-size: 1.2rem;
   max-width: 700px;
   margin: 20px;
+  transition: all 0.3s linear;
 `
 
 const Index = ({ data }) => {

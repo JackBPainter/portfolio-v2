@@ -35,6 +35,7 @@ const StyledTitle = styled.div`
 const StyledH1 = styled.h1`
   padding: 0;
   margin: 0;
+  transition: all 0.3s linear;
 `
 
 const Header = ({ siteTitle }) => {
