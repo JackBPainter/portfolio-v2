@@ -3,7 +3,7 @@ title: "About Me"
 last-updated: "07/05/2020"
 ---
 
-Hey I'm Jack, an enthusiastic and passionate junior full-stack
+Hey I'm Jack Painter, an enthusiastic and passionate junior front-end
 developer. After more than 4 years of working on the sales side of IT,
 I decided enough was enough and made the decision to drop it all and
 become a developer.

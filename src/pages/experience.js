@@ -26,28 +26,31 @@ const StyledP = styled.p`
 `
 
 const Experience = ({ data }) => {
-  console.log(data.allMarkdownRemark.edges[3])
+  console.log(data)
+  const calibrateData = data.allMarkdownRemark.edges[1].node
+  const kodiriData = data.allMarkdownRemark.edges[3].node
+  const earlyData = data.allMarkdownRemark.edges[2].node
 
   return (
     <Layout>
       <div>
         <span>
-          <StyledH1>{data.allMarkdownRemark.edges[1].node.frontmatter.title}</StyledH1>
-          <StyledH3>{data.allMarkdownRemark.edges[1].node.frontmatter.dates}</StyledH3>
-          <StyledP>{data.allMarkdownRemark.edges[1].node.frontmatter.skills}</StyledP>
-          <StyledP>{data.allMarkdownRemark.edges[1].node.rawMarkdownBody}</StyledP>
+          <StyledH1>{calibrateData.frontmatter.title}</StyledH1>
+          <StyledH3>{calibrateData.frontmatter.dates}</StyledH3>
+          <StyledP>{calibrateData.frontmatter.skills}</StyledP>
+          <StyledP>{calibrateData.rawMarkdownBody}</StyledP>
         </span>
         <span>
-            <StyledH1>{data.allMarkdownRemark.edges[2].node.frontmatter.title}</StyledH1>
-            <StyledH3>{data.allMarkdownRemark.edges[2].node.frontmatter.dates}</StyledH3>
-            <StyledP>{data.allMarkdownRemark.edges[2].node.frontmatter.skills}</StyledP>
-            <StyledP>{data.allMarkdownRemark.edges[2].node.rawMarkdownBody}</StyledP>
+            <StyledH1>{kodiriData.frontmatter.title}</StyledH1>
+            <StyledH3>{kodiriData.frontmatter.dates}</StyledH3>
+            <StyledP>{kodiriData.frontmatter.skills}</StyledP>
+            <StyledP>{kodiriData.rawMarkdownBody}</StyledP>
         </span>
         <span>
-            <StyledH1>{data.allMarkdownRemark.edges[3].node.frontmatter.title}</StyledH1>
-            <StyledH3>{data.allMarkdownRemark.edges[3].node.frontmatter.dates}</StyledH3>
-            <StyledP>{data.allMarkdownRemark.edges[3].node.frontmatter.skills}</StyledP>
-            <StyledP>{data.allMarkdownRemark.edges[3].node.rawMarkdownBody}</StyledP>
+            <StyledH1>{earlyData.frontmatter.title}</StyledH1>
+            <StyledH3>{earlyData.frontmatter.dates}</StyledH3>
+            <StyledP>{earlyData.frontmatter.skills}</StyledP>
+            <StyledP>{earlyData.rawMarkdownBody}</StyledP>
         </span>
       </div>
     </Layout>
@@ -58,7 +61,7 @@ export default Experience
 
 export const query = graphql`
   query {
-    allMarkdownRemark {
+    allMarkdownRemark(sort: {fields: frontmatter___title}) {
       edges {
         node {
           frontmatter {
