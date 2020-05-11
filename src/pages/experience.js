@@ -5,24 +5,30 @@ import { graphql } from "gatsby"
 // Components
 import Layout from "../components/layout"
 
-const StyledH1 = styled.h1`
-  font-size: 40px;
-  font-weight: 600;
-  text-align: center;
-  margin: 20px;
+const StyledDiv = styled.div` 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
 `
 
-const StyledH3 = styled.h3`
-  font-size: 20px;
+const StyledH1 = styled.h1`
+  display: flex;
+  justify-content: space-between;
+  font-size: 35px;
   font-weight: 600;
-  text-align: center;
-  margin: 20px;
+  max-width: 680px;
+
+  em {
+      font-weight: 400;
+      font-size: 25px;
+      margin-top: 5px;
+  }
 `
 
 const StyledP = styled.p`
   font-size: 1.2rem;
   max-width: 700px;
-  margin: 0 auto;
 `
 
 const Experience = ({ data }) => {
@@ -33,26 +39,22 @@ const Experience = ({ data }) => {
 
   return (
     <Layout>
-      <div>
+      <StyledDiv>
         <span>
-          <StyledH1>{calibrateData.frontmatter.title}</StyledH1>
-          <StyledH3>{calibrateData.frontmatter.dates}</StyledH3>
-          <StyledP>{calibrateData.frontmatter.skills}</StyledP>
+          <StyledH1>{calibrateData.frontmatter.title}  <em>{calibrateData.frontmatter.dates}</em></StyledH1>
+          <StyledP><strong>Technical Skills: </strong>{calibrateData.frontmatter.skills}</StyledP>
           <StyledP>{calibrateData.rawMarkdownBody}</StyledP>
         </span>
         <span>
-            <StyledH1>{kodiriData.frontmatter.title}</StyledH1>
-            <StyledH3>{kodiriData.frontmatter.dates}</StyledH3>
-            <StyledP>{kodiriData.frontmatter.skills}</StyledP>
+            <StyledH1>{kodiriData.frontmatter.title}  <em>{kodiriData.frontmatter.dates}</em></StyledH1>
+            <StyledP><strong>Technical Skills: </strong>{kodiriData.frontmatter.skills}</StyledP>
             <StyledP>{kodiriData.rawMarkdownBody}</StyledP>
         </span>
         <span>
-            <StyledH1>{earlyData.frontmatter.title}</StyledH1>
-            <StyledH3>{earlyData.frontmatter.dates}</StyledH3>
-            <StyledP>{earlyData.frontmatter.skills}</StyledP>
+            <StyledH1>{earlyData.frontmatter.title}  <em>{earlyData.frontmatter.dates}</em></StyledH1>
             <StyledP>{earlyData.rawMarkdownBody}</StyledP>
         </span>
-      </div>
+      </StyledDiv>
     </Layout>
   )
 }
