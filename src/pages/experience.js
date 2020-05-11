@@ -22,7 +22,7 @@ const StyledH1 = styled.h1`
   em {
       font-weight: 400;
       font-size: 25px;
-      margin-top: 5px;
+      margin-top: 8px;
   }
 `
 
@@ -42,12 +42,12 @@ const Experience = ({ data }) => {
       <StyledDiv>
         <span>
           <StyledH1>{calibrateData.frontmatter.title}  <em>{calibrateData.frontmatter.dates}</em></StyledH1>
-          <StyledP><strong>Technical Skills: </strong>{calibrateData.frontmatter.skills}</StyledP>
+          <StyledP><strong>Primary Skills: </strong>{calibrateData.frontmatter.skills}</StyledP>
           <StyledP>{calibrateData.rawMarkdownBody}</StyledP>
         </span>
         <span>
             <StyledH1>{kodiriData.frontmatter.title}  <em>{kodiriData.frontmatter.dates}</em></StyledH1>
-            <StyledP><strong>Technical Skills: </strong>{kodiriData.frontmatter.skills}</StyledP>
+            <StyledP><strong>Primary Skills: </strong>{kodiriData.frontmatter.skills}</StyledP>
             <StyledP>{kodiriData.rawMarkdownBody}</StyledP>
         </span>
         <span>
