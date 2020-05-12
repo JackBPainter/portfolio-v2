@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 
 // Components
 import Layout from "../components/layout"
+import { Skills } from "../components/skills"
 
 // Images
 import Face from "../images/face.jpeg"
@@ -76,6 +77,7 @@ const Index = ({ data }) => {
         </StyledSvgContainer>
             <StyledH1>{data.allMarkdownRemark.edges[0].node.frontmatter.title}</StyledH1>
             <StyledP>{data.allMarkdownRemark.edges[0].node.rawMarkdownBody}</StyledP>
+            <Skills />
       </StyledAboutContainer>
     </Layout>
   )
