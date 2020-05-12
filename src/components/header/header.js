@@ -15,13 +15,14 @@ const StyledHeader = styled.header`
   background: ${({ theme }) => theme.primaryColor};
   color: ${({ theme }) => theme.secondaryColor};
   margin-bottom: 55px;
+  transition: all 0.3s linear;
 `
 
 const StyledTitle = styled.div`
   position: absolute;
   top: 5px;
   left: 100px;
-  transition: transform 0.3s ease-in-out;
+  transition: all 0.3s linear;
   transform: ${({ open }) => open ? 'translateX(25%)' : 'translateX(0)'};
   margin: 0 auto;
   max-width: 960px;
@@ -35,7 +36,6 @@ const StyledTitle = styled.div`
 const StyledH1 = styled.h1`
   padding: 0;
   margin: 0;
-  transition: all 0.3s linear;
 `
 
 const Header = ({ siteTitle }) => {

@@ -13,7 +13,7 @@ const StyledMenu = styled.nav`
   padding: 2rem;
   position: absolute;
   left: 0;
-  transition: transform 0.3s ease-in-out;
+  transition: all 0.3s linear;
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
   z-index: 1;
 
