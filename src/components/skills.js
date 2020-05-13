@@ -45,21 +45,21 @@ const StyledH1 = styled.h1`
 const StyledSpan = styled.span`
   margin: 0 auto;
   width: 290px;
-  margin-bottom: 20px;
   text-align: center;
 `
 
 const StyledH3 = styled.h3`
-
+  margin-top: 30px;
+  margin-bottom: 15px;
 `
 
 const StyledSpanSkills = styled.span`
-  margin: 0 auto;
   text-align: center;
 `
 
 const StyledSpanSecondarySkills = styled.span`
-  width: 75px;
+  width: 60px;
+  text-align: center;
 `
 
 const Skills = () => {
