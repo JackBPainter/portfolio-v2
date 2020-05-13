@@ -1,7 +1,7 @@
 ---
 title: "Web Development"
 last-updated: "12/05/2020"
-primary-skills: "React, JavaScript, Node, HTML, CSS"
+primary-skills: "React JavaScript Node HTML CSS"
 secondary-skills: "Agile D3 Gatsby GraphQL Prisma Github Bitbucket"
 ---
 
