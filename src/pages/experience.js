@@ -10,6 +10,7 @@ const StyledDiv = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center; 
+    margin: 20px;
 `
 
 const StyledH1 = styled.h1`
@@ -19,6 +20,10 @@ const StyledH1 = styled.h1`
   font-weight: 600;
   max-width: 680px;
 
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    flex-direction: column;
+  }
+
   em {
       font-weight: 400;
       font-size: 25px;
@@ -27,7 +32,7 @@ const StyledH1 = styled.h1`
 `
 
 const StyledP = styled.p`
-  font-size: 1.2rem;
+  font-size: 17px;
   max-width: 700px;
 `
 
