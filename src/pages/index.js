@@ -63,9 +63,10 @@ const StyledH1 = styled.h1`
 `
 
 const StyledP = styled.p`
-  font-size: 1.2rem;
-  max-width: 395px;
-  margin: 20px;
+  font-size: 17px;
+  max-width: 416px;
+  margin-top: 15px;
+  margin-bottom: 0;
   transition: all 0.3s linear;
 `
 
@@ -83,7 +84,8 @@ const Index = ({ data }) => {
             </svg>
           </StyledSvgContainer>
           <StyledH1>{data.allMarkdownRemark.edges[0].node.frontmatter.title}</StyledH1>
-          <StyledP>{data.allMarkdownRemark.edges[0].node.rawMarkdownBody}</StyledP>
+          <StyledP>{data.allMarkdownRemark.edges[0].node.frontmatter.about_professional}</StyledP>
+          <StyledP>{data.allMarkdownRemark.edges[0].node.frontmatter.about_personal}</StyledP>
         </StyledAboutContainer>
         <StyledAboutContainer>
           <Skills />
@@ -102,8 +104,9 @@ export const query = graphql`
         node {
           frontmatter {
             title
+            about_professional
+            about_personal
           }
-          rawMarkdownBody
         }
       }
     }
