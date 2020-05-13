@@ -19,6 +19,7 @@ const StyledDiv = styled.div`
   svg {
     height: 115px;
     width: 130px;
+    margin-top: 20px;
     margin-bottom: 10px;
   }
 
