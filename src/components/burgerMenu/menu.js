@@ -10,8 +10,8 @@ const StyledMenu = styled.nav`
   background: ${({ theme }) => theme.primaryColor};
   height: 100vh;
   text-align: left;
-  padding: 2rem;
-  position: absolute;
+  padding: 40px;
+  position: fixed;
   left: 0;
   transition: all 0.3s linear;
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
@@ -19,6 +19,7 @@ const StyledMenu = styled.nav`
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
     width: 100%;
+    padding: 5px;
   }
 
   a {

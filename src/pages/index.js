@@ -77,9 +77,11 @@ const StyledP = styled.p`
   margin-top: 15px;
   margin-bottom: 0;
   transition: all 0.3s linear;
+  text-align: center;
 
-  @media (max-width: ${({ theme }) => theme.mobile}) {
-    text-align: center;
+  @media (max-width: ${({ theme }) => theme.tablet}) {
+    max-width: 300px;
+    margin-left: 10px;
   }
 `
 

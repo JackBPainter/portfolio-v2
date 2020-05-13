@@ -30,6 +30,7 @@ const StyledTitle = styled.div`
 
   @media (max-width: ${({ theme }) => theme.tablet}) {
     opacity: 0;
+    width: 0px;
   }
 `
 

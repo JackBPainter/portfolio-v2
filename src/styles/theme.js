@@ -5,8 +5,8 @@ const lightTheme = {
     toggleBackground: "#FFFFFF",
     toggleBorder: "black",
     primaryHover: "blue",
-    mobile: "576px",
-    tablet: "800px"
+    mobile: "600px",
+    tablet: "900px"
 }
 
 const darkTheme = {
@@ -16,8 +16,8 @@ const darkTheme = {
     toggleBackground: "black",
     toggleBorder: "#FFFFFF",
     primaryHover: "blue",
-    mobile: "576px",
-    tablet: "800px"
+    mobile: "600px",
+    tablet: "900px"
 }
 
 module.exports = { lightTheme, darkTheme }
