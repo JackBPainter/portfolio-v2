@@ -16,6 +16,13 @@ const StyledDiv = styled.div`
   box-sizing: border-box;
   transition: all 0.3s linear;
 
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    margin-left: 0px;
+    width: 320px;
+    border-radius: 5%;
+    margin-top: 20px;
+  }
+
   svg {
     height: 115px;
     width: 130px;
