@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 
 // Components
 import Layout from "../components/layout"
-import { Skills } from "../components/skills"
+import Skills from "../components/skills"
 
 // Images
 import Face from "../images/face.jpeg"
