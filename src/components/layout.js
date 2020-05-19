@@ -15,7 +15,9 @@ import styled from "styled-components"
 import Header from "./header/header"
 
 const StyledDiv = styled.div`
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 const Layout = ({ children }) => {
