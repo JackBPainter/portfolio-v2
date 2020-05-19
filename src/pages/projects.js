@@ -20,8 +20,8 @@ const StyledDiv = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  max-width: 850px;
+  justify-content: space-between;
+  max-width: 725px;
 `
 
 const Projects = () => {
