@@ -36,7 +36,7 @@ const StyledSpan = styled.span`
     flex-direction: column;
     justify-content: flex-start;
     width: 340px;
-
+    height: 80px;
 
     @media (max-width: ${({ theme }) => theme.mobile}) {
         width: 290px
@@ -48,16 +48,16 @@ const StyledH4 = styled.h4`
 `
 
 const StyledP = styled.p`   
-    margin: 5px 0px;
+    margin: 2px 0px;
 `
 
-const ProjectBox = () => {
+const ProjectBox = ({ title, skills }) => {
     return (
         <StyledMain>
             <StyledDiv />
             <StyledSpan>
-                <StyledH4>Project Example</StyledH4>
-                <StyledP>Example blah blah blah</StyledP>
+                <StyledH4>{title}</StyledH4>
+                <StyledP>{skills}</StyledP>
             </StyledSpan>
         </StyledMain>
     )

@@ -33,16 +33,22 @@ const StyledSpan = styled.div`
   max-width: 750px;
 `
 
-const Projects = () => {
+const Projects = ({ data }) => {
+
+  const tetris = data.allMarkdownRemark.edges[7].node
+  const programateur = data.allMarkdownRemark.edges[6].node
+  const originalPortfolio = data.allMarkdownRemark.edges[5].node
+  const currentPortfolio = data.allMarkdownRemark.edges[2].node
+  
   return (
     <Layout>
       <StyledDiv>
         <StyledH1>Projects</StyledH1>
         <StyledSpan>
-          <ProjectBox />
-          <ProjectBox />
-          <ProjectBox />
-          <ProjectBox />
+          <ProjectBox title={tetris.frontmatter.title} skills={tetris.frontmatter.skills} />
+          <ProjectBox title={programateur.frontmatter.title} skills={programateur.frontmatter.skills} />
+          <ProjectBox title={originalPortfolio.frontmatter.title} skills={originalPortfolio.frontmatter.skills} />
+          <ProjectBox title={currentPortfolio.frontmatter.title} skills={currentPortfolio.frontmatter.skills} />
         </StyledSpan>
       </StyledDiv>
     </Layout>
@@ -50,3 +56,19 @@ const Projects = () => {
 }
 
 export default Projects
+
+
+export const query = graphql`
+  query {
+    allMarkdownRemark(sort: { fields: frontmatter___title }) {
+      edges {
+        node {
+          frontmatter {
+            title
+            skills
+          }
+        }
+      }
+    }
+  }
+`
