@@ -8,7 +8,7 @@ const StyledMain = styled.main`
     flex-direction: column;
     height: 250px;
     width: 350px;
-    margin-bottom: 30px;
+    margin: 10px;
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
     border-radius: 2%;
     background: ${({ theme }) => theme.primaryColor};
