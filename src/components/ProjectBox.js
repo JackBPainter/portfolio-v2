@@ -8,11 +8,11 @@ const StyledMain = styled.main`
     flex-direction: column;
     height: 250px;
     width: 400px;
+    margin-bottom: 20px;
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
     border-radius: 2%;
     background: ${({ theme }) => theme.primaryColor};
     color: ${({ theme }) => theme.secondaryColor};
-
 `
 
 const StyledDiv = styled.div`
