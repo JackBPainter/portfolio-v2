@@ -45,6 +45,7 @@ const Experience = ({ data }) => {
   return (
     <Layout>
       <StyledDiv>
+        <StyledH1>Experience</StyledH1>
         <span>
           <StyledH1>{calibrateData.frontmatter.title}  <em>{calibrateData.frontmatter.dates}</em></StyledH1>
           <StyledP><strong>Primary Skills: </strong>{calibrateData.frontmatter.skills}</StyledP>
