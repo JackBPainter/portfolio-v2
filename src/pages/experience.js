@@ -39,8 +39,8 @@ const StyledP = styled.p`
 const Experience = ({ data }) => {
   console.log(data)
   const calibrateData = data.allMarkdownRemark.edges[1].node
-  const kodiriData = data.allMarkdownRemark.edges[3].node
-  const earlyData = data.allMarkdownRemark.edges[2].node
+  const kodiriData = data.allMarkdownRemark.edges[4].node
+  const earlyData = data.allMarkdownRemark.edges[3].node
 
   return (
     <Layout>
