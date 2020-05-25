@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import Img from "gatsby-image"
 
 // Components
 import Layout from "../components/layout"
@@ -34,21 +35,34 @@ const StyledSpan = styled.div`
 `
 
 const Projects = ({ data }) => {
+  console.log(data)
 
   const tetris = data.allMarkdownRemark.edges[7].node
   const programateur = data.allMarkdownRemark.edges[6].node
   const originalPortfolio = data.allMarkdownRemark.edges[5].node
   const currentPortfolio = data.allMarkdownRemark.edges[2].node
-  
+
   return (
     <Layout>
       <StyledDiv>
         <StyledH1>Projects</StyledH1>
         <StyledSpan>
-          <ProjectBox title={tetris.frontmatter.title} skills={tetris.frontmatter.skills} />
-          <ProjectBox title={programateur.frontmatter.title} skills={programateur.frontmatter.skills} />
-          <ProjectBox title={originalPortfolio.frontmatter.title} skills={originalPortfolio.frontmatter.skills} />
-          <ProjectBox title={currentPortfolio.frontmatter.title} skills={currentPortfolio.frontmatter.skills} />
+          <ProjectBox
+            title={tetris.frontmatter.title}
+            skills={tetris.frontmatter.skills}
+          />
+          <ProjectBox
+            title={programateur.frontmatter.title}
+            skills={programateur.frontmatter.skills}
+          />
+          <ProjectBox
+            title={originalPortfolio.frontmatter.title}
+            skills={originalPortfolio.frontmatter.skills}
+          />
+          <ProjectBox
+            title={currentPortfolio.frontmatter.title}
+            skills={currentPortfolio.frontmatter.skills}
+          />
         </StyledSpan>
       </StyledDiv>
     </Layout>
@@ -56,7 +70,6 @@ const Projects = ({ data }) => {
 }
 
 export default Projects
-
 
 export const query = graphql`
   query {
@@ -66,6 +79,13 @@ export const query = graphql`
           frontmatter {
             title
             skills
+            # featuredImage {
+            #   childImageSharp {
+            #     fluid(maxWidth: 800) {
+            #       ...GatsbyImageSharpFluid
+            #     }
+            #   }
+            # }
           }
         }
       }
