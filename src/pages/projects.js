@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
 
 // Components
 import Layout from "../components/layout"
@@ -59,7 +58,7 @@ const Projects = ({ data }) => {
             title={originalPortfolio.frontmatter.title}
             skills={originalPortfolio.frontmatter.skills}
           />
-          <ProjectBox
+          <ProjectBox 
             title={currentPortfolio.frontmatter.title}
             skills={currentPortfolio.frontmatter.skills}
           />
@@ -79,13 +78,6 @@ export const query = graphql`
           frontmatter {
             title
             skills
-            # featuredImage {
-            #   childImageSharp {
-            #     fluid(maxWidth: 800) {
-            #       ...GatsbyImageSharpFluid
-            #     }
-            #   }
-            # }
           }
         }
       }
