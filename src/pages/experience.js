@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 
 // Components
-import Layout from "../components/Layout"
+import Layout from "../components/layout"
 
 const StyledDiv = styled.div` 
     display: flex; 

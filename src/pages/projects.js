@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 // Components
-import Layout from "../components/Layout"
+import Layout from "../components/layout"
 import ProjectBox from "../components/ProjectBox"
 
 const StyledDiv = styled.div`

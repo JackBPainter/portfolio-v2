@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 
 // Components
-import Layout from "../components/Layout"
+import Layout from "../components/layout"
 
 const Contact = () => {
   const [firstName, setFirstName] = useState("")
