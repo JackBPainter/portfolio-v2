@@ -27,7 +27,7 @@ module.exports = {
         name: `Jack-Painter-Portfolio`,
         short_name: `portfolio`,
         start_url: `/`,
-        icon: `src/images/JP-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/JP-Icon.png`, // This path is relative to the root of the site.
       },
     },
     {
