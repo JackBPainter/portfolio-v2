@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 // Components
-import Toggle from "./toggle"
+import Toggle from "./Toggle"
 
 const StyledButtonContainer = styled.div`
   top: 30px;

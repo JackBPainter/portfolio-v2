@@ -4,9 +4,9 @@ import styled from "styled-components"
 import { useOnOutsideClick } from "../../hooks/useOnOutsideClick"
 
 // Components
-import Burger from "../burgerMenu/burger"
-import Menu from "../burgerMenu/menu"
-import Buttons from "./buttons"
+import Burger from "../burgerMenu/Burger"
+import Menu from "../burgerMenu/Menu"
+import Buttons from "./Buttons"
 
 // Styled Components
 const StyledHeader = styled.header`

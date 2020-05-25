@@ -12,7 +12,7 @@ import { GlobalStyles } from "../styles/global"
 import styled from "styled-components"
 
 // Components
-import Header from "./header/header"
+import Header from "./header/Main"
 
 const StyledDiv = styled.div`
   display: flex;

@@ -2,8 +2,8 @@ import React from "react"
 import styled from "styled-components"
 
 // Components
-import Layout from "../components/layout"
-import ProjectBox from "../components/projectBox"
+import Layout from "../components/Layout"
+import ProjectBox from "../components/ProjectBox"
 
 const StyledDiv = styled.div`
   display: flex;
@@ -34,8 +34,6 @@ const StyledSpan = styled.div`
 `
 
 const Projects = ({ data }) => {
-  console.log(data)
-
   const tetris = data.allMarkdownRemark.edges[7].node
   const programateur = data.allMarkdownRemark.edges[6].node
   const originalPortfolio = data.allMarkdownRemark.edges[5].node

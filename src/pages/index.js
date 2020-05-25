@@ -3,8 +3,8 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 
 // Components
-import Layout from "../components/layout"
-import Skills from "../components/skills"
+import Layout from "../components/Layout"
+import Skills from "../components/Skills"
 
 // Images
 import Face from "../images/face.jpeg"

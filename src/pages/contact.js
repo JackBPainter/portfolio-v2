@@ -1,8 +1,9 @@
 import React, { useState } from "react"
-import Layout from "../components/layout"
+
+// Components
+import Layout from "../components/Layout"
 
 const Contact = () => {
-  // An input form whose value is controlled by React is known as a controlled component
   const [firstName, setFirstName] = useState("")
   const [surname, setSurname] = useState("")
   const [email, setEmail] = useState("")
