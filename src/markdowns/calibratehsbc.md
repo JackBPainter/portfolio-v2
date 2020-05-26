@@ -2,7 +2,7 @@
 title: "Calibrate / HSBC"
 last-updated: "11/05/2020"
 dates: "Nov 2019 - Present"
-skills: "React.js, D3.js, Qlik API, HTML, CSS (Styled Components)"
+skills: "React, D3.js, Qlik API, HTML, CSS (Styled Components)"
 ---
 
 Currently working for Calibrate on-site at HSBC where I am a 

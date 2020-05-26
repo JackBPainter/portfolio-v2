@@ -66,7 +66,7 @@ const StyledH3 = styled.h3`
 `
 
 const StyledPrimarySkills = styled.span`
-  width: 75px;
+  width: 70px;
   text-align: center;
 `
 
