@@ -1,7 +1,18 @@
 import React, { useState } from "react"
+import styled from "styled-components"
 
 // Components
 import Layout from "../components/Layout"
+
+const StyledForm = styled.form`
+  display: flex;
+  flex-direction: column;
+`
+
+const StyledInput = styled.input`
+  border-radius: 2%;
+  border: none;
+`
 
 const Contact = () => {
   const [firstName, setFirstName] = useState("")
@@ -11,25 +22,13 @@ const Contact = () => {
 
   return (
     <Layout>
-      <form name="contact">
-        <label>
-          First Name
-          <input type="text" name="firstName" />
-        </label>
-        <label>
-          Last Name
-          <input type="text" name="lastName" />
-        </label>
-        <label>
-          Email
-          <input type="email" name="email" />
-        </label>
-        <label>
-          Number
-          <input type="number" name="number" />
-        </label>
+      <StyledForm name="contact">
+          <StyledInput placeholder="First Name" type="text" name="firstName" />
+          <StyledInput placeholder="Last Name" type="text" name="lastName" />
+          <StyledInput placeholder="Email" type="email" name="email" />
+          <StyledInput placeholder="Number" type="number" name="number" />
         <button type="submit">Submit</button>
-      </form>
+      </StyledForm>
     </Layout>
   )
 }
