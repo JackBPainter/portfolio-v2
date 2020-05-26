@@ -48,7 +48,7 @@ const StyledMessage = styled.textarea`
   font-size: 13.3333px;
   font-family: sans-serif;
   box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   padding: 10px;
   height: 200px;
 
@@ -69,6 +69,20 @@ const StyledMessage = styled.textarea`
   }
 `
 
+const StyledButton = styled.button`
+  border-radius: 8%;
+  transition: all 0.3s linear;
+  color: ${({ theme }) => theme.secondaryColor};
+  background: ${({ theme }) => theme.primaryColor};
+  border: none;
+  font-weight: 550;
+  font-size: 13.3333px;
+  font-family: sans-serif;
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  width: 70px;
+`
+
 const Contact = () => {
   const [firstName, setFirstName] = useState("")
   const [surname, setSurname] = useState("")
@@ -83,7 +97,7 @@ const Contact = () => {
         <StyledInput placeholder="Number" type="number" name="number" />
         <StyledInput placeholder="Subject" type="text" name="subject" />
         <StyledMessage placeholder="Your message" type="text" name="message" />
-        <button type="submit">Submit</button>
+        <StyledButton type="submit">Send</StyledButton>
       </StyledForm>
     </Layout>
   )
