@@ -49,7 +49,7 @@ const StyledH1 = styled.h1`
   font-size: 30px;
   font-weight: 600;
   text-align: center;
-  margin-top: 20px;
+  margin-top: -5px;
   margin-bottom: 0;
   margin-bottom: 15px;
 `
