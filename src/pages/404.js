@@ -11,8 +11,9 @@ const StyledH1 = styled.h1`
   font-weight: 600;
   transition: all 0.3s linear;
   margin-bottom: none;
+  text-align: center;
 
-  span {
+  a {
     color: ${({ theme }) => theme.secondaryColor};
     transition: color 0.3s linear;
     cursor: pointer;
@@ -25,8 +26,9 @@ const StyledH1 = styled.h1`
 `
 
 const StyledP = styled.p`
-  font-size: 9px;
+  font-size: 10px;
   transition: all 0.3s linear;
+  text-align: center;
 `
 
 const NotFoundPage = () => {
@@ -38,8 +40,16 @@ const NotFoundPage = () => {
       <StyledH1>It seems you are unable to type correctly...</StyledH1>
       <StyledP>or maybe it's an error my side</StyledP>
       <StyledH1>
-        Either way, click <span onClick={e => setClicked(!clicked)}>here</span> to read all about me again
+        Either way, click <a onClick={e => setClicked(true)}>here</a> to read all about me again
       </StyledH1>
+      {
+        clicked ? 
+          <>
+            <StyledP>*Sigh*</StyledP>
+            <StyledH1>Click <Link to="/">here</Link> for about</StyledH1>
+          </>
+          : ""
+      }
     </Layout>
   )
 }
