@@ -30,6 +30,7 @@ const StyledDiv = styled.div`
     width: 130px;
     margin-top: 20px;
     margin-bottom: 10px;
+    transition: all 0.3s linear;
   }
 
   path {

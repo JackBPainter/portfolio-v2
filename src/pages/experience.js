@@ -19,6 +19,7 @@ const StyledH1 = styled.h1`
   font-size: 35px;
   font-weight: 600;
   max-width: 680px;
+  transition: all 0.3s linear;
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
     flex-direction: column;
@@ -34,6 +35,7 @@ const StyledH1 = styled.h1`
 const StyledP = styled.p`
   font-size: 17px;
   max-width: 700px;
+  transition: all 0.3s linear;
 `
 
 const Experience = ({ data }) => {
