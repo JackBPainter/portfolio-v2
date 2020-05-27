@@ -61,3 +61,18 @@ const Projects = ({ data }) => {
 }
 
 export default Projects
+
+export const query = graphql`
+  query {
+    allMarkdownRemark(sort: { fields: frontmatter___title }) {
+      edges {
+        node {
+          frontmatter {
+            title
+            skills
+          }
+        }
+      }
+    }
+  }
+`
