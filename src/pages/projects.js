@@ -10,13 +10,13 @@ const StyledDiv = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 20px;
 `
 
 const StyledH1 = styled.h1`
   font-size: 35px;
   font-weight: 600;
   max-width: 680px;
+  transition: all 0.3s linear;
 `
 
 const StyledSpan = styled.div`
@@ -25,6 +25,7 @@ const StyledSpan = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   max-width: 750px;
+  transition: all 0.3s linear;
 `
 
 const Projects = ({ data }) => {

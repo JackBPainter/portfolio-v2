@@ -14,7 +14,7 @@ const StyledHeader = styled.header`
   height: 90px;
   background: ${({ theme }) => theme.primaryColor};
   color: ${({ theme }) => theme.secondaryColor};
-  margin-bottom: 55px;
+  margin-bottom: 85px;
   transition: all 0.3s linear;
 `
 
