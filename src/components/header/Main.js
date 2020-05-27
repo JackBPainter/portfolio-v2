@@ -23,7 +23,7 @@ const StyledTitle = styled.div`
   top: 5px;
   left: 100px;
   transition: all 0.3s linear;
-  transform: ${({ open }) => open ? 'translateX(25%)' : 'translateX(0)'};
+  transform: ${({ open }) => open ? 'translateX(26%)' : 'translateX(0)'};
   margin: 0 auto;
   max-width: 960px;
   padding: 1.45rem 1.0875rem;

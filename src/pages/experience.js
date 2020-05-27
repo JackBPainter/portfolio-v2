@@ -10,7 +10,6 @@ const StyledDiv = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center; 
-    margin: 20px;
 `
 
 const StyledH1 = styled.h1`
@@ -39,7 +38,6 @@ const StyledP = styled.p`
 `
 
 const Experience = ({ data }) => {
-  console.log(data)
   const calibrateData = data.allMarkdownRemark.edges[1].node
   const kodiriData = data.allMarkdownRemark.edges[4].node
   const earlyData = data.allMarkdownRemark.edges[3].node
