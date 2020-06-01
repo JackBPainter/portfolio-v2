@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import Img from "gatsby-image"
 
 const StyledMain = styled.main`
     display: flex;
@@ -51,10 +52,12 @@ const StyledP = styled.p`
     margin: 2px 0px;
 `
 
-const ProjectBox = ({ title, skills }) => {
+const ProjectBox = ({ title, skills, fluid }) => {
     return (
         <StyledMain>
-            <StyledDiv />
+            <StyledDiv>
+                <Img fluid={fluid} />
+            </StyledDiv>
             <StyledSpan>
                 <StyledH4>{title}</StyledH4>
                 <StyledP>{skills}</StyledP>

@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { graphql } from "gatsby"
 
 // Components
 import Layout from "../components/Layout"
@@ -29,10 +30,10 @@ const StyledSpan = styled.div`
 `
 
 const Projects = ({ data }) => {
-  const tetris = data.allMarkdownRemark.edges[7].node
-  const programateur = data.allMarkdownRemark.edges[6].node
-  const originalPortfolio = data.allMarkdownRemark.edges[5].node
-  const currentPortfolio = data.allMarkdownRemark.edges[2].node
+  const tetris = data.allMarkdownRemark.edges[0].node
+  const programateur = data.allMarkdownRemark.edges[1].node
+  const originalPortfolio = data.allMarkdownRemark.edges[2].node
+  const currentPortfolio = data.allMarkdownRemark.edges[3].node
 
   return (
     <Layout>
@@ -42,18 +43,22 @@ const Projects = ({ data }) => {
           <ProjectBox
             title={tetris.frontmatter.title}
             skills={tetris.frontmatter.skills}
+            fluid={tetris.frontmatter.featuredImage.childImageSharp.fluid}
           />
           <ProjectBox
             title={programateur.frontmatter.title}
             skills={programateur.frontmatter.skills}
+            fluid={programateur.frontmatter.featuredImage.childImageSharp.fluid}
           />
           <ProjectBox
             title={originalPortfolio.frontmatter.title}
             skills={originalPortfolio.frontmatter.skills}
+            fluid={originalPortfolio.frontmatter.featuredImage.childImageSharp.fluid}
           />
-          <ProjectBox 
+          <ProjectBox
             title={currentPortfolio.frontmatter.title}
             skills={currentPortfolio.frontmatter.skills}
+            fluid={currentPortfolio.frontmatter.featuredImage.childImageSharp.fluid}
           />
         </StyledSpan>
       </StyledDiv>
@@ -65,12 +70,26 @@ export default Projects
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { fields: frontmatter___title }) {
+    allMarkdownRemark(sort: { fields: frontmatter___featuredImage___name }) {
       edges {
         node {
           frontmatter {
             title
             skills
+            featuredImage {
+              childImageSharp {
+                fluid {
+                  base64
+                  tracedSVG
+                  aspectRatio
+                  sizes
+                  src
+                  srcSet
+                  srcWebp
+                  srcSetWebp
+                }
+              }
+            }
           }
         }
       }
