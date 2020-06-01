@@ -21,11 +21,11 @@ const StyledMain = styled.main`
 `
 
 const StyledDiv = styled.div`
-    height: 160px;
-    width: 340px;
+    height: 155px;
+    width: 330px;
     margin-top: 10px;
     border-radius: 2%;
-    background: ${({ theme }) => theme.secondaryColor};
+    overflow: hidden;
 
     @media (max-width: ${({ theme }) => theme.mobile}) {
         width: 290px
@@ -35,7 +35,6 @@ const StyledDiv = styled.div`
 const StyledSpan = styled.span`
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     width: 340px;
     height: 80px;
 
@@ -46,10 +45,12 @@ const StyledSpan = styled.span`
 
 const StyledH4 = styled.h4`
     margin: 10px 0px 5px 0px;
+    text-align: center;
 `
 
 const StyledP = styled.p`   
     margin: 2px 0px;
+    text-align: center;
 `
 
 const ProjectBox = ({ title, skills, fluid }) => {
