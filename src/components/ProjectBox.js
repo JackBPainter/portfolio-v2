@@ -35,7 +35,7 @@ const StyledDiv = styled.div`
 const StyledSpan = styled.span`
     display: flex;
     flex-direction: column;
-    width: 340px;
+    width: 330px;
     height: 80px;
 
     @media (max-width: ${({ theme }) => theme.mobile}) {
@@ -45,12 +45,10 @@ const StyledSpan = styled.span`
 
 const StyledH4 = styled.h4`
     margin: 10px 0px 5px 0px;
-    text-align: center;
 `
 
 const StyledP = styled.p`   
     margin: 2px 0px;
-    text-align: center;
 `
 
 const ProjectBox = ({ title, skills, fluid }) => {
@@ -61,7 +59,7 @@ const ProjectBox = ({ title, skills, fluid }) => {
             </StyledDiv>
             <StyledSpan>
                 <StyledH4>{title}</StyledH4>
-                <StyledP>{skills}</StyledP>
+                <StyledP><strong>Skills used: </strong> {skills}</StyledP>
             </StyledSpan>
         </StyledMain>
     )
