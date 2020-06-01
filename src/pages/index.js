@@ -11,6 +11,7 @@ const StyledIndexContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
     flex-direction: column;
