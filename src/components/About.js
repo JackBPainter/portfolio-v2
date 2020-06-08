@@ -1,30 +1,19 @@
 import React from "react"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 // Images
 import Face from "../images/face.jpeg"
 
 const StyledImgContainer = styled.div`
   flex: 1;
-  margin: 20px;
   width: 250px;
-  height: 250px;
   box-sizing: border-box;
   background: white;
   border-radius: 5%;
   overflow: hidden;
   box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-
-  @media (max-width: ${({ theme }) => theme.mobile}) {
-    margin-top: 0px;
-    margin-bottom: 20px;
-  }
-`
-
-const StyledImg = styled.img`
-  width: 105%;
-  height: 125%;
 `
 
 const StyledSvgContainer = styled.div`
@@ -74,6 +63,20 @@ const About = () => {
             title
             about_professional
             about_personal
+            featuredImage {
+              childImageSharp {
+                fluid {
+                  base64
+                  tracedSVG
+                  aspectRatio
+                  sizes
+                  src
+                  srcSet
+                  srcWebp
+                  srcSetWebp
+                }
+              }
+            }
           }
         }
       }
@@ -84,7 +87,7 @@ const About = () => {
   return (
     <>
       <StyledImgContainer>
-        <StyledImg src={Face} alt="My Face" />
+        <Img fluid={data.allMarkdownRemark.edges[0].node.frontmatter.featuredImage.childImageSharp.fluid} />
       </StyledImgContainer>
       <StyledSvgContainer>
         <svg x="0px" y="0px" viewBox="0 0 511.999 511.999">
