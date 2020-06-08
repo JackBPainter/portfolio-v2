@@ -33,7 +33,9 @@ const Projects = ({ data }) => {
   const tetris = data.allMarkdownRemark.edges[0].node
   const programateur = data.allMarkdownRemark.edges[1].node
   const originalPortfolio = data.allMarkdownRemark.edges[2].node
-  const currentPortfolio = data.allMarkdownRemark.edges[4].node
+  const currentPortfolio = data.allMarkdownRemark.edges[3].node
+
+   console.log(data)
 
   return (
     <Layout>
@@ -74,7 +76,7 @@ export default Projects
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { fields: frontmatter___featuredImage___name }) {
+    allMarkdownRemark(sort: {fields: frontmatter___id, order: ASC}) {
       edges {
         node {
           frontmatter {
