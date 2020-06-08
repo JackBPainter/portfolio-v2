@@ -24,7 +24,7 @@ const StyledSpan = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   max-width: 750px;
   transition: all 0.3s linear;
 `
@@ -38,7 +38,7 @@ const Projects = ({ data }) => {
   return (
     <Layout>
       <StyledDiv>
-        <StyledH1>Projects</StyledH1>
+        <StyledH1>Personal Projects</StyledH1>
         <StyledSpan>
           <ProjectBox
             title={tetris.frontmatter.title}
