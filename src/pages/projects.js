@@ -43,21 +43,25 @@ const Projects = ({ data }) => {
           <ProjectBox
             title={tetris.frontmatter.title}
             skills={tetris.frontmatter.skills}
+            repo={tetris.frontmatter.repo}
             fluid={tetris.frontmatter.featuredImage.childImageSharp.fluid}
           />
           <ProjectBox
             title={programateur.frontmatter.title}
             skills={programateur.frontmatter.skills}
+            repo={programateur.frontmatter.repo}
             fluid={programateur.frontmatter.featuredImage.childImageSharp.fluid}
           />
           <ProjectBox
             title={originalPortfolio.frontmatter.title}
             skills={originalPortfolio.frontmatter.skills}
+            repo={originalPortfolio.frontmatter.repo}
             fluid={originalPortfolio.frontmatter.featuredImage.childImageSharp.fluid}
           />
           <ProjectBox
             title={currentPortfolio.frontmatter.title}
             skills={currentPortfolio.frontmatter.skills}
+            repo={currentPortfolio.frontmatter.repo}
             fluid={currentPortfolio.frontmatter.featuredImage.childImageSharp.fluid}
           />
         </StyledSpan>
@@ -76,6 +80,7 @@ export const query = graphql`
           frontmatter {
             title
             skills
+            repo
             featuredImage {
               childImageSharp {
                 fluid {

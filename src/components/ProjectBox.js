@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
+import { string, object } from "prop-types"
 
 const StyledMain = styled.main`
     display: flex;
@@ -51,7 +52,9 @@ const StyledP = styled.p`
     margin: 2px 0px;
 `
 
-const ProjectBox = ({ title, skills, fluid }) => {
+const ProjectBox = ({ title, skills, fluid, repo }) => {
+    console.log()
+
     return (
         <StyledMain>
             <StyledDiv>
@@ -63,6 +66,13 @@ const ProjectBox = ({ title, skills, fluid }) => {
             </StyledSpan>
         </StyledMain>
     )
+}
+
+ProjectBox.propTypes = {
+    title: string.isRequired,
+    skills: string.isRequired,
+    fluid: object.isRequired,
+    repo: string.isRequired
 }
 
 export default ProjectBox
