@@ -13,6 +13,7 @@ const StyledMain = styled.main`
   margin: 10px;
   box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
   border-radius: 2%;
+  transition: all 0.3s linear;
   background: ${({ theme }) => theme.primaryColor};
 
   a {
