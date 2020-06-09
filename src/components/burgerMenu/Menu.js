@@ -15,7 +15,7 @@ const StyledMenu = styled.nav`
   left: 0;
   transition: all 0.3s linear;
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
-  z-index: 1;
+  z-index: 10;
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
     width: 100%;

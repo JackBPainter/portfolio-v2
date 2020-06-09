@@ -11,7 +11,7 @@ const StyledButtonContainer = styled.div`
   justify-content: space-between;
   position: absolute;
   right: 2rem;
-  z-index: 5;
+  z-index: 15;
 `
 
 const StyledGithubContainer = styled.a`

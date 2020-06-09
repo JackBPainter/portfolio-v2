@@ -7,7 +7,6 @@ import Img from "gatsby-image"
 import Face from "../images/face.jpeg"
 
 const StyledImgContainer = styled.div`
-  flex: 1;
   width: 250px;
   box-sizing: border-box;
   background: white;

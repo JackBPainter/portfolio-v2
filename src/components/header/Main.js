@@ -17,6 +17,7 @@ const StyledHeader = styled.header`
   color: ${({ theme }) => theme.secondaryColor};
   margin-bottom: 55px;
   transition: all 0.3s linear;
+  z-index: 25;
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
     position: sticky
