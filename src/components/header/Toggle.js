@@ -22,7 +22,7 @@ const StyledCircle = styled.em`
     background: ${({ isDark }) => isDark ? '#FFFFFF' : 'black'};
     color: ${({ isDark }) => isDark ? 'black' : '#FFFFFF'};
     border-radius: 100%;
-    transition: all 0.2s linear;
+    transition: all 0.3s linear;
     font-size: 0.5rem;
     top: 5.5px;
     left: ${({ isDark }) => isDark ? '30px': '6.5px'};
@@ -30,14 +30,14 @@ const StyledCircle = styled.em`
     width: 17.5px;
 `
 
-const Toggle = () => {
+const Toggle = React.forwardRef((props, ref) => {
   const themeContext = useContext(ThemeManagerContext)
 
   return (
-      <StyledSliderContainer onClick={() => themeContext.toggleDark()}>
+      <StyledSliderContainer ref={ref} onClick={() => themeContext.toggleDark()}>
         <StyledCircle isDark={themeContext.isDark}></StyledCircle>
       </StyledSliderContainer>
   )
-}
+})
 
 export default Toggle

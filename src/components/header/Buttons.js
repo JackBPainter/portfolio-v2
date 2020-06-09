@@ -31,7 +31,7 @@ const StyledLinkedInContainer = styled.a`
   fill: ${({ theme }) => theme.secondaryColor};
 `
 
-const Buttons = () => {
+const Buttons = React.forwardRef((props, ref) => {
   return (
     <StyledButtonContainer>
       <StyledGithubContainer href="https://github.com/JackBPainter">
@@ -50,9 +50,10 @@ const Buttons = () => {
           </g>
         </svg>
       </StyledLinkedInContainer>
-      <Toggle />
+      <Toggle ref={ref} />
     </StyledButtonContainer>
   )
-}
+});
+
 
 export default Buttons

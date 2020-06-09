@@ -40,10 +40,11 @@ const StyledH1 = styled.h1`
 `
 
 const Header = ({ siteTitle }) => {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState (false)
   const node = useRef()
+  const node2 = useRef()
 
-  useOnOutsideClick(node, () => setOpen(false))
+  useOnOutsideClick(node, node2, () => setOpen(false))
 
   return (
     <StyledHeader>
@@ -54,7 +55,7 @@ const Header = ({ siteTitle }) => {
       <StyledTitle open={open}>
         <StyledH1>{siteTitle}</StyledH1>
       </StyledTitle>
-      <Buttons />
+      <Buttons ref={node2} />
     </StyledHeader>
   )
 }

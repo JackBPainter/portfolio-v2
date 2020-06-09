@@ -29,7 +29,7 @@ const StyledMenu = styled.nav`
     font-weight: bold;
     letter-spacing: 0.2rem;
     color: ${({ theme }) => theme.secondaryColor};
-    transition: color 0.3s linear;
+    transition: all 0.3s linear;
     text-decoration: none;
 
     @media (max-width: ${({ theme }) => theme.mobile}) {
@@ -43,16 +43,17 @@ const StyledMenu = styled.nav`
   }
 `
 
-const Menu = ({ open }) => {
+const Menu = React.forwardRef(({ open }, ref) => {
+
   return (
-    <StyledMenu open={open}>
+    <StyledMenu ref={ref} open={open}>
       <Link to="/">About</Link>
       <Link to="/experience">Experience</Link>
       <Link to="/projects">Projects</Link>
       <Link to="/contact">Contact</Link>
     </StyledMenu>
   )
-}
+})
 
 Menu.propTypes = {
   open: bool.isRequired,

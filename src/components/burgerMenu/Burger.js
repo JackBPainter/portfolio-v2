@@ -45,15 +45,15 @@ const StyledBurger = styled.button`
   }
 `
 
-const Burger = ({ open, setOpen }) => {
+const Burger = React.forwardRef(({ open, setOpen }, ref)  => {
   return (
-    <StyledBurger open={open} onClick={() => setOpen(!open)}>
+    <StyledBurger ref={ref} open={open} onClick={() => setOpen(!open)}>
       <div />
       <div />
       <div />
     </StyledBurger>
   )
-}
+})
 
 Burger.propTypes = {
   open: bool.isRequired,
