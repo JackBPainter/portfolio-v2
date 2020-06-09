@@ -17,10 +17,10 @@ const StyledHeader = styled.header`
   color: ${({ theme }) => theme.secondaryColor};
   margin-bottom: 55px;
   transition: all 0.3s linear;
-  z-index: 25;
+  z-index: 15;
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
-    position: sticky
+    position: ${({ open }) => open ? 'sticky' : 'relative'};
   }
 `
 
@@ -53,7 +53,7 @@ const Header = ({ siteTitle }) => {
   useOnOutsideClick(node, node2, () => setOpen(false))
 
   return (
-    <StyledHeader>
+    <StyledHeader open={open}>
       <div ref={node}>
         <Burger open={open} setOpen={setOpen} />
         <Menu open={open} setOpen={setOpen} />
