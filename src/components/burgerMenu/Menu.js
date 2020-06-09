@@ -47,7 +47,7 @@ const Menu = React.forwardRef(({ open }, ref) => {
 
   return (
     <StyledMenu ref={ref} open={open}>
-      <Link to="/">About</Link>
+      <Link to="/">Home</Link>
       <Link to="/experience">Experience</Link>
       <Link to="/projects">Projects</Link>
       <Link to="/contact">Contact</Link>
