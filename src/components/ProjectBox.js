@@ -19,6 +19,10 @@ const StyledMain = styled.main`
   a {
     color: ${({ theme }) => theme.secondaryColor};
     text-decoration-line: none;
+
+    &:hover {
+      color: ${({ theme }) => theme.primaryHover};
+    }
   }
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
