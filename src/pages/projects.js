@@ -36,8 +36,6 @@ const Projects = ({ data }) => {
   const originalPortfolio = data.allMarkdownRemark.edges[2].node
   const currentPortfolio = data.allMarkdownRemark.edges[3].node
 
-   console.log(data)
-
   return (
     <Layout>
       <StyledDiv>

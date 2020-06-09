@@ -10,7 +10,7 @@ const StyledImgContainer = styled.div`
   width: 250px;
   box-sizing: border-box;
   background: white;
-  border-radius: 5%;
+  border-radius: 3%;
   overflow: hidden;
   box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
 `

@@ -11,7 +11,7 @@ const StyledDiv = styled.div`
   background: ${({ theme }) => theme.primaryColor};
   color: ${({ theme }) => theme.secondaryColor};
   margin-left: 70px;
-  border-radius: 5%;
+  border-radius: 3%;
   box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
   box-sizing: border-box;
   transition: all 0.3s linear;
