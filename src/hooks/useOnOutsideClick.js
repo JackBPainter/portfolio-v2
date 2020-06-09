@@ -8,7 +8,6 @@ export const useOnOutsideClick = (node, node2, handler) => {
       }
       handler(event) // Set menu as closed
     }
-    console.log(node2.current.contains(event.target))
     document.addEventListener("mousedown", listener)
     return () => {
         document.removeEventListener("mousedown", listener)

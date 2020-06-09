@@ -11,11 +11,16 @@ import Buttons from "./Buttons"
 // Styled Components
 const StyledHeader = styled.header`
   position: relative;
+  top: 0;
   height: 90px;
   background: ${({ theme }) => theme.primaryColor};
   color: ${({ theme }) => theme.secondaryColor};
   margin-bottom: 55px;
   transition: all 0.3s linear;
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    position: sticky
+  }
 `
 
 const StyledTitle = styled.div`
@@ -40,7 +45,7 @@ const StyledH1 = styled.h1`
 `
 
 const Header = ({ siteTitle }) => {
-  const [open, setOpen] = useState (false)
+  const [open, setOpen] = useState(false)
   const node = useRef()
   const node2 = useRef()
 
