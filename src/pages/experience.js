@@ -13,8 +13,6 @@ const StyledDiv = styled.div`
 `
 
 const StyledH1 = styled.h1`
-  display: flex;
-  justify-content: space-between;
   margin: 0 0 30px 0;
   font-size: 35px;
   font-weight: 600;
