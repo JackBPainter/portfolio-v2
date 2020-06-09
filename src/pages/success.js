@@ -5,12 +5,14 @@ import styled from "styled-components"
 import Layout from "../components/Layout"
 
 const StyledH1 = styled.h1`
-  margin: 0 0 30px 0;
+  margin: 0 auto;
   font-size: 35px;
   font-weight: 600;
+  margin-top: 60px;
   max-width: 480px;
   transition: all 0.3s linear;
   text-align: center;
+  align-items: center;
 `
 
 const Success = () => {

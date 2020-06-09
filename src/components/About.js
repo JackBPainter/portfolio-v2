@@ -3,9 +3,6 @@ import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-// Images
-import Face from "../images/face.jpeg"
-
 const StyledImgContainer = styled.div`
   width: 250px;
   box-sizing: border-box;
