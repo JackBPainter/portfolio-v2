@@ -17,6 +17,7 @@ const StyledH1 = styled.h1`
   font-size: 35px;
   font-weight: 600;
   max-width: 680px;
+  margin: 0 0 30px 0;
   transition: all 0.3s linear;
 `
 
