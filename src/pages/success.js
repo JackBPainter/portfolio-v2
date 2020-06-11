@@ -5,6 +5,15 @@ import { Link } from "gatsby"
 // Components
 import Layout from "../components/Layout"
 
+const StyledMain = styled.main`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: -7px -7px 0 -7px;
+  background: lightgray;
+`
+
 const StyledDiv = styled.div`
   display: flex;
   justify-content: space-evenly;
@@ -13,13 +22,12 @@ const StyledDiv = styled.div`
   transition: all 0.3s linear;
   height: 300px;
   width: 300px;
-  margin-top: 60px;
   border-radius: 3%;
   box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-  background: ${({ theme }) => theme.primaryColor};
+  background: black;
 
   svg {
-    fill: ${({ theme }) => theme.secondaryColor};
+    fill: white;
     transition: all 0.3s linear;
 
     &:hover {
@@ -33,7 +41,7 @@ const StyledH1 = styled.h1`
   font-size: 35px;
   font-weight: 600;
   max-width: 280px;
-  color: ${({ theme }) => theme.secondaryColor};
+  color: white;
   transition: all 0.3s linear;
   text-align: center;
   align-items: center;
@@ -41,7 +49,7 @@ const StyledH1 = styled.h1`
 
 const Success = () => {
   return (
-    <Layout>
+    <StyledMain>
       <StyledDiv>
         <StyledH1>
           Thanks for reaching out, I will get back to you soon!
@@ -52,7 +60,7 @@ const Success = () => {
           </svg>
         </Link>
       </StyledDiv>
-    </Layout>
+    </StyledMain>
   )
 }
 
