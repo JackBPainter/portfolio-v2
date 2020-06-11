@@ -24,6 +24,7 @@ const StyledDiv = styled.div`
 
     &:hover {
       fill: ${({ theme }) => theme.primaryHover};
+      transition: none;
     }
   }
 `
