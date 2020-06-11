@@ -131,6 +131,7 @@ const Contact = () => {
         </svg>
       </StyledSvgContainer>
       <StyledForm name="Contacted" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/pages/success">
+        <input type="hidden" name="form-name" value="Contacted" />
         <StyledInput placeholder="Name" type="text" name="name" />
         <StyledInput placeholder="Email" type="email" name="email" />
         <StyledInput placeholder="Subject" type="text" name="subject" />
