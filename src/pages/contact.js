@@ -134,7 +134,7 @@ const Contact = () => {
         <StyledInput placeholder="Name" type="text" name="name" />
         <StyledInput placeholder="Email" type="email" name="email" />
         <StyledInput placeholder="Subject" type="text" name="subject" />
-        <input type="hidden" name="bot-field" />
+        <input aria-label="hidden pot" type="hidden" name="bot-field" />
         <StyledMessage placeholder="Your message" type="text" name="message" />
         <StyledButton type="submit">Send</StyledButton>
       </StyledForm>

@@ -64,7 +64,7 @@ const StyledP = styled.p`
 const ProjectBox = ({ title, skills, fluid, repo }) => {
   return (
       <StyledMain>
-      <a href={repo} target="_blank">
+      <a href={repo} target="_blank" rel="noreferrer">
         <StyledDiv>
           <Img fluid={fluid} />
         </StyledDiv>
