@@ -51,16 +51,27 @@ const NotFoundPage = () => {
       <StyledH1>It seems you are unable to type correctly...</StyledH1>
       <StyledP>or maybe it's an error my side</StyledP>
       <StyledH1>
-        Either way, click <span onClick={e => setClicked(true)}>here</span> to read all about me again
+        Either way, click{" "}
+        <span
+          onClick={e => setClicked(true)}
+          role="button"
+          tabIndex={0}
+          onKeyDown={e => setClicked(true)}
+        >
+          here
+        </span>{" "}
+        to read all about me again
       </StyledH1>
-      {
-        clicked ? 
-          <>
-            <StyledP>*Sigh*</StyledP>
-            <StyledH1>Click <Link to="/">here</Link> for about</StyledH1>
-          </>
-          : ""
-      }
+      {clicked ? (
+        <>
+          <StyledP>*Sigh*</StyledP>
+          <StyledH1>
+            Click <Link to="/">here</Link> for about
+          </StyledH1>
+        </>
+      ) : (
+        ""
+      )}
     </Layout>
   )
 }
