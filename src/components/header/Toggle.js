@@ -30,14 +30,16 @@ const StyledCircle = styled.em`
     width: 17.5px;
 `
 
-const Toggle = () => {
+const Toggle = React.forwardRef((props, ref) => {
   const themeContext = useContext(ThemeManagerContext)
 
+  console.log(themeContext.isDark)
+
   return (
-      <StyledSliderContainer onClick={() => themeContext.toggleDark()}>
-        <StyledCircle isDark={themeContext.isDark}></StyledCircle>
-      </StyledSliderContainer>
+    <StyledSliderContainer ref={ref} onClick={() => themeContext.toggleDark()}>
+      <StyledCircle isDark={themeContext.isDark}></StyledCircle>
+    </StyledSliderContainer>
   )
-}
+})
 
 export default Toggle

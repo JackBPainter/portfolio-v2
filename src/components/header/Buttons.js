@@ -46,7 +46,7 @@ const StyledLinkedInContainer = styled.a`
   }
 `
 
-const Buttons = () => {
+const Buttons = React.forwardRef((props, ref) => {
   return (
     <StyledButtonContainer>
       <StyledGithubContainer
@@ -71,9 +71,9 @@ const Buttons = () => {
           </g>
         </svg>
       </StyledLinkedInContainer>
-      <Toggle />
+      <Toggle ref={ref} />
     </StyledButtonContainer>
   )
-}
+})
 
 export default Buttons
