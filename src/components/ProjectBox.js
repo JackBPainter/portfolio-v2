@@ -21,6 +21,7 @@ const StyledMain = styled.main`
     text-decoration-line: none;
 
     &:hover {
+      transition: all 0.3s linear;
       color: ${({ theme }) => theme.primaryHover};
     }
   }

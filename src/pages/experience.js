@@ -13,7 +13,7 @@ const StyledDiv = styled.div`
 `
 
 const StyledH1 = styled.h1`
-  margin: 0 0 30px 0;
+  margin: 0 0 10px 0;
   font-size: 35px;
   font-weight: 600;
   max-width: 680px;
@@ -31,10 +31,11 @@ const StyledSpan = styled.span`
 const StyledH2 = styled.h2`
   display: flex;
   justify-content: space-between;
-  margin: 20px 0 20px 0;
+  margin: 10px 0 10px 0;
   font-size: 30px;
   font-weight: 600;
   max-width: 680px;
+  align-items: center;
   transition: all 0.3s linear;
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
@@ -42,16 +43,14 @@ const StyledH2 = styled.h2`
   }
 
   em {
-      font-weight: 400;
-      font-size: 25px;
-      margin-top: 8px;
+    font-weight: 400;
+    font-size: 25px;
   }
 `
 
 const StyledP = styled.p`
   font-size: 17px;
   max-width: 700px;
-  margin-bottom: 15px;
   transition: all 0.3s linear;
 `
 
